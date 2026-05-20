@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap');
+@import "tailwindcss";
+
+/* ── Light mode tokens ─────────────────────────────────────────────── */
+:root {
+  --brand-green:    #2ca85a;
+  --page-bg:        #f8f6f4;
+  --section-alt:    #ece9e3;
+  --footer-bg:      #141414;
+  --destructive:    #d4183d;
+  --border:         rgba(0, 0, 0, 0.1);
+  --text-primary:   #0f0f0f;
+  --text-muted:     #6b6b6b;
+  --card-bg:        #ffffff;
+  --btn-primary-bg: #1a1a1a;
+  --btn-primary-fg: #ffffff;
+}
+
+/* ── Dark mode overrides ───────────────────────────────────────────── */
+.dark {
+  --page-bg:        #111110;
+  --section-alt:    #1a1917;
+  --footer-bg:      #0a0a09;
+  --text-primary:   #f0ede8;
+  --text-muted:     #888885;
+  --card-bg:        #1e1d1b;
+  --border:         rgba(255, 255, 255, 0.08);
+  --btn-primary-bg: #f0ede8;
+  --btn-primary-fg: #111110;
+}
+
+/* ── Base reset ────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--page-bg);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}

@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/spendly
+
+jwt:
+  secret: spendly-jwt-secret-key-minimum-32-chars-for-hmac256-security
+  expiration: 86400000   # 24 h in ms
+
+razorpay:
+  key:
+    id: rzp_test_SrbKB6rCYrCCnI
+    secret: boJ9e6ttaV725ALsJiKbE34u
+  webhook:
+    secret: ""   # set after configuring endpoint in Razorpay dashboard
