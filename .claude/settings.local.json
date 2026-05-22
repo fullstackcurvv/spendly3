@@ -2,10 +2,18 @@
   "permissions": {
     "allow": [
       "Bash(npm run *)",
-      "Bash(mvn compile *)"
+      "Bash(mvn compile *)",
+      "Bash(RAILWAY_CALLER=\"skill:use-railway@1.2.1\" RAILWAY_AGENT_SESSION=\"railway-skill-deploy-spendly\" railway add --service backend --json)",
+      "Bash(RAILWAY_CALLER=\"skill:use-railway@1.2.1\" RAILWAY_AGENT_SESSION=\"railway-skill-deploy-spendly\" railway variable list --service MongoDB --json)",
+      "Bash(RAILWAY_CALLER=\"skill:use-railway@1.2.1\" RAILWAY_AGENT_SESSION=\"railway-skill-deploy-spendly\" railway deployment list --service backend --limit 3 --json)",
+      "Bash(railway deployment *)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d[0]['status']\\)\")",
+      "Bash(RAILWAY_CALLER=\"skill:use-railway@1.2.1\" RAILWAY_AGENT_SESSION=\"railway-skill-deploy-spendly\" railway redeploy --service backend --yes)",
+      "Bash(curl *)"
     ]
   },
   "enabledPlugins": {
-    "frontend-design@claude-plugins-official": true
+    "frontend-design@claude-plugins-official": true,
+    "railway@railway-skills": true
   }
 }
