@@ -43,12 +43,13 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         String originsEnv = System.getenv("CORS_ALLOWED_ORIGINS");
-        List<String> origins = (originsEnv != null && !originsEnv.isBlank())
-                ? Arrays.asList(originsEnv.split(","))
-                : List.of("http://localhost:5173");
 
         CorsConfiguration cfg = new CorsConfiguration();
-        cfg.setAllowedOrigins(origins);
+        if (originsEnv != null && !originsEnv.isBlank()) {
+            cfg.setAllowedOrigins(Arrays.asList(originsEnv.split(",")));
+        } else {
+            cfg.setAllowedOriginPatterns(List.of("http://localhost:*"));
+        }
         cfg.setAllowedMethods(List.of("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
         cfg.setAllowedHeaders(List.of("*"));
         cfg.setAllowCredentials(true);
