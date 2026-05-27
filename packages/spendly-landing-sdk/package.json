@@ -1,6 +1,6 @@
 {
   "name": "spendly-landing-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reusable Spendly landing page SDK",
   "type": "module",
   "main": "./dist/spendly-landing-sdk.umd.cjs",
@@ -22,8 +22,8 @@
   },
   "peerDependencies": {
     "lucide-react": "^0.468.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
     "react-router-dom": "^7.0.0"
   },
   "devDependencies": {

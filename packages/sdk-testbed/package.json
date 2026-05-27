@@ -14,7 +14,7 @@
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-router-dom": "^7.15.1",
-    "spendly-landing-sdk": "file:../spendly-landing-sdk/spendly-landing-sdk-1.0.0.tgz"
+    "spendly-landing-sdk": "^1.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
